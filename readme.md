@@ -362,4 +362,4 @@ and follow the instructions that are suited for your system.
 Afterwards, go to : [https://docs.docker.com/compose/install/linux/#install-using-the-repository](https://docs.docker.com/compose/install/linux/#install-using-the-repository)
 and follow the instructions that are suited for your system.
 
-Once everything is installed, you can proceed with the rest of the tutorial.
+Once everything is installed, you can proceed with the rest of the tutorial here : [First steps in docker](lesson.md/#first-steps-in-docker).

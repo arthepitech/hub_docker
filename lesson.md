@@ -2,6 +2,14 @@
 
 ## First steps in docker
 
+### Start the exercices for Docker here
+
+- [Step 1 Docker](#step-1--building-our-first-docker-image)
+
+### Start the exercices for Docker-Compose here
+
+- [Step 1 docker-compose](#first-steps-in-docker-compose)
+
 ### Basic terminology
 
 1. **Image**: This terms refers to the base of what docker relies to deploy `containers`.  Images are like templates or blueprints that contain everything needed to create and start a container.
@@ -199,7 +207,7 @@ In this case it's a Flask application.
 CMD ["python", "./my_script.py"]
 ```
 
-### Creating the projects architecture
+### Step 2 : Creating the projects architecture
 
 Now that you have seen a basic structure of a Dockerfile, why don't you try to create a Dockerfile on your own.
 
@@ -217,7 +225,7 @@ Here are a few steps for this project:
 
 This is it (for the moment) for the architecture of the project, it is now time for the fun part, dockerfiles.
 
-### Creating your first dockerfile
+### Step 3 : Creating your first dockerfile
 
 Let's start with the simplest one, the server.
 
@@ -229,7 +237,7 @@ Here are the requirements for the  `server/Dockerfile`:
 - You will need to run the command  `npm install` to install the dependencies located in the files.
 - You will also need to set the default entry command to `npm start`.
 
-### Testing the server docker
+### Step 4 : Testing the server docker
 
 You can test if everything is working correctly by running:
 
@@ -258,7 +266,7 @@ sudo docker ps -a
 sudo docker image list
 ```
 
-### Creating the client dockerfile
+### step 5 : Creating the client dockerfile
 
 Let's step up the complexity, the client side (the part that a user will see).
 
@@ -272,7 +280,7 @@ The `client/Dockerfile` is going to require:
 - You will need to run the command  `npm test` to build the project.
 - You will also need to set the default entry command to `npm start`.
 
-### Testing the client docker
+### Step 6 : Testing the client docker
 
 You can test if everything is working correctly by running:
 
@@ -301,7 +309,7 @@ sudo docker ps -a
 sudo docker image list
 ```
 
-### Deploying a database
+### Step 7 : Deploying a database
 
 Wouldn't it be good if we could have a form of permanent storage?
 
@@ -323,7 +331,7 @@ The requirements for the `database/dockerfile` are:
 - port `3307` need to be exposed
 - The `my_data/data.sql` file needs to be located in `/docker-entrypoint-initdb.d/` so that it gets executed during the initialization of the DBMS (so it can be accessed from outside the Docker network)
 
-### Testing the database docker
+### Step 8 : Testing the database docker
 
 You can test if everything is working correctly by running:
 
