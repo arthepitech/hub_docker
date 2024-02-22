@@ -1,0 +1,17 @@
+FROM node:latest
+RUN mkdir -p /client
+WORKDIR /client
+COPY ./client/package*.json ./
+RUN apt-get update -y
+RUN apt-get install npm -y
+COPY . /server
+RUN npm install
+RUN npm install cors --save
+COPY ./client/my_client /client/
+RUN npm install && npm build && npm test
+EXPOSE 443
+EXPOSE 80-90
+EXPOSE 8080-8090
+CMD ["npm", "start"]
+
+# a similar variant also works

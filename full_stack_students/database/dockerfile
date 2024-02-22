@@ -1,0 +1,9 @@
+FROM mariadb:latest
+
+# Deploy databases from .sql files
+COPY ./my_data/ /docker-entrypoint-initdb.d/
+
+# Make port 3300-3309 available to the world outside this container
+EXPOSE 3300-3309
+
+# EXPOSE 3307 # also works, the above was done as a safety measure
