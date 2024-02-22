@@ -4,7 +4,7 @@ WORKDIR /client
 COPY ./package*.json ./
 RUN apt-get update -y
 RUN apt-get install npm -y
-COPY . /server
+COPY . /client
 RUN npm install
 RUN npm install cors --save
 COPY . /client/
