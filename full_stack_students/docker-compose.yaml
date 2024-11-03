@@ -33,19 +33,19 @@ services:
     depends_on:
       - database
 
-  nginx:
-    build:
-      context: ./client
-      dockerfile: Dockerfile
-    image: my_client_image
-    container_name: my_client
-    restart: always
-    tty: true
-    ports:
-      - "80:8080"
-    working_dir: /client
-    depends_on:
-      - server
+  # nginx:
+  #   build:
+  #     context: ./client
+  #     dockerfile: Dockerfile
+  #   image: my_client_image
+  #   container_name: my_client
+  #   restart: always
+  #   tty: true
+  #   ports:
+  #     - "80:8080"
+  #   working_dir: /client
+  #   depends_on:
+  #     - server
 
 networks:
   et-network:
